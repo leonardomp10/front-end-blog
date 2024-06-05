@@ -46,6 +46,7 @@ function AllPost() {
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+    const disableButton = currentPage * postsPerPage >= posts.length;
 
     return (
         <Layout>
@@ -72,7 +73,7 @@ function AllPost() {
                         </button>
                         <button
                             onClick={() => setCurrentPage(currentPage + 1)}
-                            disabled={currentPosts.length < postsPerPage}
+                            disabled={currentPosts.length < postsPerPage || disableButton}
                         >
                             Próxima
                         </button>
