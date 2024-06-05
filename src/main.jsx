@@ -7,6 +7,7 @@ import {
 
 import Home from './pages/Home';
 import Post from './pages/Post';
+import AllPosts from './pages/AllPosts';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "post/:slug",
     element: <Post />,
+  },
+  {
+    path: "all/",
+    element: <AllPosts />,
   },
 ]);
 
