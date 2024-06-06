@@ -40,7 +40,7 @@
     height: 80px;
 }
 
-a {
-  color: inherit;
-  text-decoration: inherit;
+.noLink {
+	color: #FFFFFF;
+    text-decoration: none;
 }
