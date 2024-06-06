@@ -44,7 +44,7 @@ function Post() {
                                     dangerouslySetInnerHTML={{ __html: documentToHtmlString(post.fields.blogPostContent)}}
                                 />
                                 
-								<div class="fixedOnBottom">
+								<div className="fixedOnBottom">
 									<Link to={'..'}
 										onClick={(e) => {
 										  e.preventDefault();

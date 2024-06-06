@@ -5,7 +5,7 @@ function Header({title = "Front-End Blog Cincão Junior"}) {
         <nav className="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
             <div className="container-fluid">
                 <span className="navbar-brand mb-0 h1">
-                    <Link to="/" class="noLink">{title}</Link>
+                    <Link to="/" className="noLink">{title}</Link>
                 </span>
             </div>
         </nav>

@@ -4,16 +4,16 @@ import Header from "../Header";
 function Layout({children}) {
     return (
         <>
-			<div class='upperDiv'>
-				<div class='headerDiv'>
+			<div className='upperDiv'>
+				<div className='headerDiv'>
 					<Header />
 				</div>
-				<div class='flexDiv'>
-					<div class='childrenDiv'>
+				<div className='flexDiv'>
+					<div className='childrenDiv'>
 						{children}
 					</div>
 				</div>
-				<div class='footerDiv'>
+				<div className='footerDiv'>
 					<Footer />
 				</div>
 			</div>

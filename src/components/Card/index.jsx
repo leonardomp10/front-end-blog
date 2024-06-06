@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 
-function Card({title, text, link = "/", linkText = "Ver post"}) {
+function Card({title, category, text, link = "/", linkText = "Ver post"}) {
     return (
         <div className="card mb-3">
             <div className="card-body">
                 <h3 className="card-title">
                     {title}
                 </h3>
+                <p className="card-text">
+                    {category}
+                </p>
                 <p className="card-text">
                     {text}
                 </p>

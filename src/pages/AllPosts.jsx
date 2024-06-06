@@ -10,7 +10,7 @@ function AllPost() {
     const [categories, setCategories] = useState([]);
     const [posts, setPosts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1); // Adiciona o estado para a página atual
-    const postsPerPage = 4; // Define o número de posts por página
+    const postsPerPage = 3; // Define o número de posts por página
 
     const getCategories = async () => {
         try {
@@ -52,7 +52,7 @@ function AllPost() {
         <Layout>
             <div className="container my-4">
                 <div className="row">
-					<div class="col-md-2" />
+					<div className="col-md-2" />
                     <main className="col-md-8">
                         <h2 className="mb-3">
 							Todas as postagens
@@ -62,15 +62,16 @@ function AllPost() {
                             <Card
                                 key={item.sys.id}
                                 title={item.fields.blogPostTitle}
+                                category={item.fields.blogPostCategory.fields.blogCategoryTitle}
                                 text={item.fields.blogPostDescription}
                                 link={'/post/' + item.fields.blogPostSlug}
                             />
                         ))}
 
-						<div class="fixedOnBottom" style={{width: '300px'}}>
+						<div className="fixedOnBottom" style={{width: '300px'}}>
 							{/* Botões de próxima e anterior */}
 							<button
-								class="btn btn-dark"
+								className="btn btn-dark"
 								onClick={() => setCurrentPage(currentPage - 1)}
 								disabled={currentPage === 1}
 							>
@@ -80,7 +81,7 @@ function AllPost() {
 							Página {currentPage} de {Math.ceil(posts.length / postsPerPage)}
 							&nbsp;&nbsp;&nbsp;
 							<button
-								class="btn btn-dark"
+								className="btn btn-dark"
 								onClick={() => setCurrentPage(currentPage + 1)}
 								disabled={currentPosts.length < postsPerPage || disableButton}
 							>
@@ -88,7 +89,7 @@ function AllPost() {
 							</button>
 						</div>
                     </main>
-					<div class="col-md-2" />
+					<div className="col-md-2" />
                 </div>
             </div>
         </Layout>

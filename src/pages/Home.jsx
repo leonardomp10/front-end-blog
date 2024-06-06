@@ -28,7 +28,7 @@ function Home() {
             // se a promise for resolvida, o resultado é capturado aqui
             const response = await contentfulClient.getEntries({
                 content_type: 'blogPost',
-                limit: 4,
+                limit: 3,
                 order: '-sys.createdAt',
             });
 
@@ -59,12 +59,13 @@ function Home() {
                             <Card
                                 key={item.sys.id}
                                 title={item.fields.blogPostTitle}
+                                category={item.fields.blogPostCategory.fields.blogCategoryTitle}
                                 text={item.fields.blogPostDescription}
                                 link={'/post/' + item.fields.blogPostSlug}
                             />
                         ) )}
 						
-						<div class="fixedOnBottom">
+						<div className="fixedOnBottom">
 							<Link to="/all" className="btn btn-dark">
 								Ver todos os posts
 							</Link>
