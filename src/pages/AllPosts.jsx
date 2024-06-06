@@ -66,12 +66,15 @@ function AllPost() {
 
                         {/* Botões de próxima e anterior */}
                         <button
+                            class="btn btn-dark btnLeft"
                             onClick={() => setCurrentPage(currentPage - 1)}
                             disabled={currentPage === 1}
                         >
                             Anterior
                         </button>
+                        &nbsp;&nbsp;&nbsp;
                         <button
+                            class="btn btn-dark btnRight"
                             onClick={() => setCurrentPage(currentPage + 1)}
                             disabled={currentPosts.length < postsPerPage || disableButton}
                         >
