@@ -28,7 +28,7 @@ function Home() {
             // se a promise for resolvida, o resultado é capturado aqui
             const response = await contentfulClient.getEntries({
                 content_type: 'blogPost',
-                limit: 5,
+                limit: 4,
                 order: '-sys.createdAt',
             });
 
@@ -63,10 +63,12 @@ function Home() {
                                 link={'/post/' + item.fields.blogPostSlug}
                             />
                         ) )}
-
-                        <Link to="/all" className="btn btn-dark mt-4">
-                            Ver todos os posts
-                        </Link>
+						
+						<div class="fixedOnBottom">
+							<Link to="/all" className="btn btn-dark">
+								Ver todos os posts
+							</Link>
+						</div>
                     </main>
 
                     <aside className="col-md-4">

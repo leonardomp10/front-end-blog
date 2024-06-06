@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 import Layout from "../components/Layout";
@@ -8,7 +8,8 @@ import { contentfulClient } from '../utils/createContentfulClient';
 function Post() {
     const { slug } = useParams();
     const [post, setPost] = useState(null); // o estado inicial do post é null
-
+	const navigate = useNavigate();
+	
     const getPost = async () => {
         try {
             const response = await contentfulClient.getEntries({
@@ -43,9 +44,15 @@ function Post() {
                                     dangerouslySetInnerHTML={{ __html: documentToHtmlString(post.fields.blogPostContent)}}
                                 />
                                 
-                                <Link to="/" className="btn btn-primary mt-4">
-                                    Voltar para Home
-                                </Link>
+								<div class="fixedOnBottom">
+									<Link to={'..'}
+										onClick={(e) => {
+										  e.preventDefault();
+										  navigate(-1);
+										}} className="btn btn-dark">
+										Voltar
+									</Link>
+								</div>
                             </>
                         )}
                     </div>
