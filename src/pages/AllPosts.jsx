@@ -67,7 +67,7 @@ function AllPost() {
                             />
                         ))}
 
-						<div class="fixedOnBottom">
+						<div class="fixedOnBottom" style={{width: '300px'}}>
 							{/* Botões de próxima e anterior */}
 							<button
 								class="btn btn-dark"
