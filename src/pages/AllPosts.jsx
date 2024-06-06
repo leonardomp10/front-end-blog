@@ -52,6 +52,7 @@ function AllPost() {
         <Layout>
             <div className="container my-4">
                 <div className="row">
+					<div class="col-md-2" />
                     <main className="col-md-8">
                         <h2 className="mb-3">
 							Todas as postagens
@@ -87,15 +88,7 @@ function AllPost() {
 							</button>
 						</div>
                     </main>
-
-                    <aside className="col-md-4">
-                        <h2>Categorias</h2>
-                        <ul>
-                            {categories.map((item) => (
-                                <li key={item.sys.id}>{item.fields.blogCategoryTitle}</li>
-                            ))}
-                        </ul>
-                    </aside>
+					<div class="col-md-2" />
                 </div>
             </div>
         </Layout>
