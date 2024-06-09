@@ -7,7 +7,7 @@ function Card({title, category, text, link = "/", linkText = "Ver post"}) {
                 <h3 className="card-title">
                     {title}
                 </h3>
-                <p className="card-text">
+                <p className="card-text btn btn-outline-secondary btn-sm">
                     {category}
                 </p>
                 <p className="card-text">
