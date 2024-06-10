@@ -9,6 +9,7 @@ import { contentfulClient } from "../utils/createContentfulClient";
 function Home() {
     const [categories, setCategories] = useState([]);
     const [posts, setPosts] = useState([]);
+    const [members, setMembers] = useState([]);
 
     const getCategories = async () => {
         try {
@@ -41,9 +42,25 @@ function Home() {
         }
     };
 
+    const getMembers = async () => {
+        try {
+			debugger;
+            const response = await contentfulClient.getEntries({
+                content_type: 'members',
+                order: 'fields.memberName',
+            });
+            setMembers(response.items);
+        } catch (error) {
+            console.log('Erro ao obter membros', error);
+            setMembers([]);
+        }
+    };
+
     useEffect(() => {
         getCategories();
         getPosts();
+		debugger;
+		getMembers();
     }, []); // useEffect -> onLoad do componente Home
 
     return (
@@ -77,6 +94,12 @@ function Home() {
 
                         <ul>
                             {categories.map( (item) => <li key={item.sys.id}>{item.fields.blogCategoryTitle}</li> )}
+                        </ul>
+						
+                        <h2>Membros</h2>
+
+                        <ul>
+                            {members.map( (item) => <li key={item.sys.id}>{item.fields.memberName} - {item.fields.memberRm}</li> )}
                         </ul>
                     </aside>
                 </div>                
