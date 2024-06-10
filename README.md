@@ -6,7 +6,7 @@ Este blog utiliza o Node.js e o Vite Js em conjunto com alguns recursos do Boots
 ## Pré-requisitos
 
 Certifique-se de ter o Node.js instalado em sua máquina.
-Para rodar esse projeto localmente, é necessária também um chave de acesso ao Contentful. Essa chave é pessoal, e não é recomendável compartilhá-la. Desta forma, recomendamos a utilização de um arquivo *.gitignore* listando seu arquivo *.env.local*, que deve conter algo parecido com isso:
+Para rodar esse projeto localmente, é necessária também uma chave de acesso ao Contentful. Essa chave é pessoal e não é recomendável compartilhá-la, desta forma, recomendamos a utilização de um arquivo *.gitignore* listando seu arquivo *.env.local*, que deve conter algo parecido com isso:
 
 ```bash
 VITE_SPACE_ID= seu id individual
