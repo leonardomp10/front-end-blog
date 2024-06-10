@@ -3,10 +3,12 @@
 Um blog simples criado para a matéria de Front-End Engineering no curso da turma 5AOJR da FIAP. O nome é um trocadilho que os membros do grupo não conseguem desver nunca mais.
 Este blog utiliza o Node.js e o Vite Js em conjunto com alguns recursos do Bootstrap, além de um conteúdo elaborado usando o Contentful.
 
+A nossa versão do blog é hospedada pela Netlify, e pode ser encontrada em: https://blogcincaojunior.netlify.app/
+
 ## Pré-requisitos
 
 Certifique-se de ter o Node.js instalado em sua máquina.
-Para rodar esse projeto localmente, é necessária também uma chave de acesso ao Contentful. Essa chave é pessoal e não é recomendável compartilhá-la, desta forma, recomendamos a utilização de um arquivo *.gitignore* listando seu arquivo *.env.local*, que deve conter algo parecido com isso:
+Para rodar esse projeto localmente, é necessária também uma chave de acesso ao Contentful. Essa chave é pessoal e não é recomendável compartilhá-la. Portanto, recomendamos a utilização de um arquivo *.gitignore* listando seu arquivo *.env.local*, que deve conter algo parecido com isso:
 
 ```bash
 VITE_SPACE_ID= seu id individual
